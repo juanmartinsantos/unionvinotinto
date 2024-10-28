@@ -7,8 +7,10 @@ app = Flask(__name__)
 @app.route('/')
 def inicio():
     # Leer el archivo CSV en un DataFrame
-    user = os.getlogin()
-    df_clasificacion = pd.read_csv(f"C:/Users/{user}/OneDrive/Doctorado/codigo_Python/WebUnion/static/tabla_de_clasificacion/tabla_de_clasificacion.csv")
+    # user = os.getlogin()
+    # df_clasificacion = pd.read_csv(f"C:/Users/{user}/OneDrive/Doctorado/codigo_Python/WebUnion/static/tabla_de_clasificacion/tabla_de_clasificacion.csv")
+    url = "https://raw.githubusercontent.com/juanmartinsantos/unionvinotinto/main/static/tabla_de_clasificacion/tabla_de_clasificacion.csv"
+    df_clasificacion = pd.read_csv(url)
 
     # Convertir el DataFrame a una lista de diccionarios
     equipos = df_clasificacion.to_dict(orient='records')

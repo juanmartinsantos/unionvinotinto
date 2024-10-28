@@ -1,4 +1,4 @@
-import os
+# import os
 import pandas as pd
 
 # Datos de la tabla "Clasificación"
@@ -37,8 +37,8 @@ df_sorted = df_clasificacion.sort_values(by=['PT', 'DG', 'GF'], ascending=False)
 # Reiniciar el índice
 df_sorted.reset_index(drop=True, inplace=True)
 
-user = os.getlogin()
-df_sorted.to_csv(f"C:/Users/{user}/OneDrive/Doctorado/codigo_Python/WebUnion/static/tabla_de_clasificacion/tabla_de_clasificacion.csv", index=False)
+# user = os.getlogin()
+# df_sorted.to_csv(f"C:/Users/{user}/OneDrive/Doctorado/codigo_Python/WebUnion/static/tabla_de_clasificacion/tabla_de_clasificacion.csv", index=False)
 
 # Mostrar el DataFrame
 # print(df_clasificacion)

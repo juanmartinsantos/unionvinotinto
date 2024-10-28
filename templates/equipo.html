@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Plantilla{% endblock %}
+
+{% block content %}
+<div class="image-center">
+    <img src="{{ url_for('static', filename='grupal/local.JPG') }}" alt="local" class="equipo efecto" style="width:45%;">
+</div>
+
+<!-- <h2 class="center-text large-font">Sobre Nosotros</h2>
+<p class="center-text medium-font">Unión Vinotinto es un equipo formado por talentosos jugadores venezolanos de fútbol sala.<br>
+    Nuestro objetivo es ganar, pero siempre con deportividad y respeto.<br>
+    Con muchas ansias de comenzar nuestra aventura en la liga de FUTORMES.
+</p> -->
+
+<h2 class="center-text large-font">Jugadores</h2>
+<div class="gallery">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_1.jpg') }}" alt="Jugador 1">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_2.jpg') }}" alt="Jugador 2">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_3.jpg') }}" alt="Jugador 3">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_4.jpg') }}" alt="Jugador 4">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_5.jpg') }}" alt="Jugador 5">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_6.jpg') }}" alt="Jugador 6">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_7.jpg') }}" alt="Jugador 7">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_8.jpg') }}" alt="Jugador 8">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_9.jpg') }}" alt="Jugador 9">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_10.jpg') }}" alt="Jugador 10">
+    <img src="{{ url_for('static', filename='players_img/fondo/player_11.jpg') }}" alt="Jugador 11">
+<!--    <img src="{{ url_for('static', filename='players_img/fondo/DT.jpg') }}" alt="Jugador 12">-->
+</div>
+{% endblock %}

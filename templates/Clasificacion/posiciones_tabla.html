@@ -1,0 +1,61 @@
+<div class="posiciones-container">
+    <div class="table-title">Clasificación de los Equipos</div>
+    <table id="clasificacionEquipos">
+        <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>#</th>
+                <th>&nbsp;</th>
+                <th class="equipo">Equipo</th>
+                <th>PJ</th>
+                <th>PG</th>
+                <th>PE</th>
+                <th>PP</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DG</th>
+                <th>SN</th>
+                <th>PT</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for equipo in equipos %}
+            <tr>
+                <td>
+                    {% if loop.index <= 2 %}
+                    <span class="indicator ascenso" title="ASCENSO"></span>
+                    {% elif loop.index > equipos|length - 2 %}
+                    <span class="indicator descenso" title="DESCENSO"></span>
+                    {% else %}
+                    <span class="indicator neutral" title="Mantiene la posición"></span>
+                    {% endif %}
+                </td>
+                <td>{{ loop.index }}</td>
+                <td>&nbsp;</td>
+                <td class="equipo">
+                    {% if equipo['Equipo'] == 'UNIÓN VINOTINTO FS' %}
+                        <strong>{{ equipo['Equipo'] }}</strong>
+                    {% else %}
+                        {{ equipo['Equipo'] }}
+                    {% endif %}
+                </td>
+                <td>{{ equipo['PJ'] }}</td>
+                <td>{{ equipo['PG'] }}</td>
+                <td>{{ equipo['PE'] }}</td>
+                <td>{{ equipo['PP'] }}</td>
+                <td>{{ equipo['GF'] }}</td>
+                <td>{{ equipo['GC'] }}</td>
+                <td>{{ equipo['DG'] }}</td>
+                <td>{{ equipo['SN'] }}</td>
+                <td><span class="points">{{ equipo['PT'] }}</span></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,463 @@
+/* Estilos para la barra superior */
+.top-nav {
+    background-color: #002244; /* Azul oscuro */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.social-icons a img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.top-links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el menú principal */
+.main-nav {
+    background-color: #003366; /* Azul más claro */
+    overflow: hidden;
+    padding: 20px 0; /* Aumenta el padding */
+}
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra el menú */
+}
+
+.main-nav ul li {
+    display: inline;
+    padding: 15px 20px; /* Espaciado alrededor de los enlaces */
+}
+
+.main-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.main-nav ul li a:hover {
+    background-color: #004080; /* Color de fondo azul más claro al pasar el ratón */
+    color: #fff;
+}
+
+/* Estilos para la barra de titulares */
+.news-ticker-wrapper {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #FFFAFA;
+    padding: 0 130px; /* Añade espacio en los bordes */
+}
+
+.news-ticker {
+    background-color: red;
+    color: white;
+    overflow: hidden;
+    flex-grow: 1;
+    white-space: nowrap;
+    padding: 10px 0; /* Asegura que la altura sea consistente */
+}
+
+.news-label {
+    position: relative;
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    min-width: 100px;
+}
+
+.news-label::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 100%);
+}
+
+.news-label::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    z-index: -1;
+    clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: ticker 18s linear infinite;
+}
+
+.ticker-item {
+    display: inline-block;
+    padding: 0 350px;
+    font-size: 16px;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Cambia el color de fondo a blanco */
+}
+
+h1, h2 {
+    color: #5f0b22;
+    text-align: center;
+}
+
+#content {
+    padding: 20px;
+}
+
+.gallery img {
+    margin: 5px;
+    border: 2px solid #800020;
+}
+
+/* Estilos para centrar el logo */
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; /* Ajusta el valor según tus necesidades */
+    margin-bottom: 20px; /* Ajusta el valor según tus necesidades */
+}
+
+/* Estilos para centrar texto */
+.center-text {
+    text-align: center;
+}
+
+/* Tamaños de fuente específicos */
+.large-font {
+    font-size: 2em; /* Agranda la letra para los títulos */
+}
+
+.medium-font {
+    font-size: 1.2em; /* Agranda la letra para los párrafos */
+}
+
+/* Estilos para la galería de jugadores */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 80%;
+    height: auto;
+    border: 2px solid #800020;
+    margin: 0 auto; /* Centra las imágenes dentro de sus celdas */
+}
+
+/* Estilo para centrar la imagen */
+.image-center {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Añade un margen superior si es necesario */
+}
+
+.image-center img {
+    width: 25%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transición suave para los efectos */
+}
+/* Efecto de Sombra */
+.image-center img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto de Opacidad y Desenfoque al Pasar el Ratón (Hover) */
+.image-center img:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la imagen */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+/* Estilo para centrar la inicio */
+.image-inicio {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Añade un margen superior si es necesario */
+}
+
+.image-inicio img {
+    width: 25%;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease; /* Transición suave para los efectos */
+}
+.team-image-wrapper {
+    position: relative;
+    text-align: center; /* Centra las imágenes si es necesario */
+    margin-top: 30px; /* Ajusta según sea necesario */
+}
+
+.logo {
+    position: relative;
+    z-index: 2; /* Asegura que esta imagen esté en frente */
+    width: 15%; /* O el tamaño que desees */
+    margin: 0 auto; /* Centra la imagen */
+}
+
+.team-background {
+    position: absolute;
+    top: 0;
+    left: 50%; /* Centrar respecto al punto medio del contenedor */
+    width: 30%; /* Ajusta esto según el ancho deseado */
+    height: 100%; /* Mantén el alto para cubrir el contenedor */
+    z-index: 1; /* Coloca esta imagen detrás de la imagen del logo */
+    transform: translateX(-50%); /* Desplaza la imagen a la mitad de su ancho hacia la izquierda para centrarla */
+    opacity: 0.5; /* Opcional: reduce la opacidad para mejorar la visibilidad del logo */
+}
+
+.about-container {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    transition: transform 0.7s ease; /* Solo transición para transform */
+}
+
+.about-container:hover {
+    transform: translateY(-10px); /* Mantiene el movimiento hacia arriba */
+    /* box-shadow: none; */ /* Opcional: Elimina completamente cualquier sombra */
+}
+
+
+
+.about-text {
+    flex: 2; /* Asigna proporcionalmente más espacio al texto */
+    max-width: 35%; /* Ajusta el máximo ancho según la necesidad visual */
+    margin-right: 0; /* Elimina el margen derecho si es necesario */
+    text-align: justify; /* Justifica el texto dentro de esta sección */
+}
+
+.about-image {
+    flex: 1; /* Menor flex-grow para reducir el espacio ocupado por la imagen */
+    max-width: 40%; /* Limita el máximo ancho de la imagen */
+    margin-left: 0; /* Elimina el margen izquierdo si es necesario */
+    display: flex;
+    justify-content: flex-end; /* Mantiene la imagen alineada a la derecha dentro de su contenedor */
+}
+
+
+.about-image img {
+    width: 100%;  /* Ajusta el ancho de la imagen a su contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 20px; /* Si quieres bordes redondos en la imagen */
+}
+
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #ffffff;
+    transition: transform 0.7s ease;
+}
+
+.stats-container:hover {
+    transform: translateY(-10px); /* Mueve el contenedor hacia arriba al pasar el mouse */
+    /* box-shadow: none; */ /* Opcional: Elimina completamente cualquier sombra */
+}
+
+
+.stat {
+    text-align: center; /* Centra el texto de los números y descripciones */
+}
+
+.stat-number {
+    font-size: 2.5em; /* Tamaño grande para los números */
+    color: #5f0b22; /* Color rojo oscuro, ajusta según tu paleta */
+}
+
+.stat-description {
+    font-size: 1.2em; /* Tamaño adecuado para descripción */
+    color: #5f0b22; /* Color oscuro para el texto */
+    font-weight: bold; /* Hace que el texto sea negrita */
+}
+
+.champions-banner {
+    text-align: center; /* Centra el contenido del banner */
+    margin: 20px 0; /* Espacio arriba y abajo */
+    transition: transform 0.7s ease;
+}
+
+.champions-banner:hover {
+    transform: translateY(-10px); /* Mueve el contenedor hacia arriba al pasar el mouse */
+    /* box-shadow: none; */ /* Opcional: Elimina completamente cualquier sombra */
+}
+
+.champion-title {
+    font-size: 2.5em; /* Tamaño de la fuente más grande para el título */
+    color: #5f0b22; /* Color del texto */
+    font-weight: bold; /* Negrita para el título */
+}
+
+.champion-star {
+    color: #FFD700; /* Color de la estrella, dorado */
+    margin: 0 5px; /* Espacio a los lados de las estrellas */
+}
+
+.champion-event {
+    font-size: 1.5em; /* Tamaño de la fuente adecuado para el nombre del evento */
+    color: #333; /* Color del texto */
+    font-style: italic; /* Cursiva para el nombre del evento */
+    margin-top: 10px; /* Espacio entre el título y el evento */
+}
+
+
+/* Estilos responsivos para dispositivos con ancho máximo de 768px */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-text, .about-image {
+        flex: none; /* Cancela la división igual de espacio */
+        width: 100%; /* Hace que cada elemento tome todo el ancho */
+    }
+    .about-image img {
+        max-width: 80%; /* Reduce un poco el tamaño de la imagen */
+        margin: 0 auto; /* Centra la imagen */
+    }
+}
+/* Estructura principal para el marcador, tabla de resultados y tabla de posiciones */
+.main-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Espacio entre las columnas izquierda y derecha */
+    margin-top: 20px;
+}
+
+.left-column {
+    flex: 2; /* Ajusta este valor para el tamaño relativo de la columna izquierda */
+}
+
+.right-column {
+    flex: 1; /* Ajusta este valor para el tamaño relativo de la columna derecha */
+}
+
+.scoreboard-container, .resultados-container, .table-container {
+    margin-bottom: 20px; /* Espacio entre cada bloque */
+}
+
+.table-wrapper {
+    max-width: 400px; /* Ajusta el ancho de la tabla de posiciones */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content-wrapper {
+        flex-direction: column; /* En pantallas pequeñas, las columnas se apilan */
+    }
+    .table-wrapper, .left-column, .right-column {
+        max-width: 100%; /* Las columnas ocupan el 100% del ancho disponible */
+    }
+}
+
+
+/* PIE DE PÁGINA */
+/* PIE DE PÁGINA */
+.footer {
+    background-color: #800020; /* Color burdeos */
+    padding: 20px;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Alinea el contenido entre los extremos */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que el contenido se ajuste en pantallas pequeñas */
+}
+
+.footer-section {
+    flex: 1; /* Hace que cada sección ocupe el mismo espacio */
+    text-align: center; /* Centra el texto dentro de cada sección */
+    margin: 10px;
+}
+
+.logo-section {
+    text-align: right; /* Alinea el logo a la derecha */
+}
+
+.footer-logo {
+    width: 150px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantén las proporciones del logo */
+    margin-right: 200px; /* Añade espacio entre el logo y el borde del pie de página */
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: white; /* Asegúrate de que el color del texto sea blanco */
+}
+
+.footer-section p {
+    font-size: 16px;
+    color: white; /* Asegúrate de que el color del texto sea blanco */
+}
+
+/* Estilos para los enlaces en el pie de página */
+.footer a {
+    color: white; /* Cambia el color del texto a blanco */
+    text-decoration: none; /* Elimina el subrayado */
+    font-weight: bold; /* Aumenta el grosor del texto */
+}
+
+.footer a:hover {
+    color: #FFD700; /* Cambia el color al pasar el mouse (opcional, dorado en este caso) */
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+.social-icons {
+    margin-left: 50px; /* Ajusta el valor para mover el texto hacia la derecha */
+}
+
+.social-icons a img {
+    width: 35px; /* Ajusta este valor para agrandar el logo */
+    height: auto; /* Mantén las proporciones del logo */
+}
+
+#instafeed iframe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* Asegura que no se desborde en pantallas más pequeñas */
+}

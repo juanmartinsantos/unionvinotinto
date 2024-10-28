@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<!--<h1 class="center-text large-font">El equipo de fútbol sala más apasionado y unido</h1>-->
+
+<div class="team-image-wrapper">
+    <img src="{{ url_for('static', filename='imgs/team-Photoroom.png') }}" alt="Equipo Unión Vinotinto" class="logo">
+    <img src="{{ url_for('static', filename='imgs/black-Photoroom.png') }}" alt="Fondo del equipo" class="team-background">
+</div>
+
+ <!-- Añade espacio de 20px -->
+<div style="height: 80px;"></div>
+ <!-- Añade espacio -->
+
+<div class="champions-banner">
+    <div class="champion-title">
+        <span class="champion-text">Participación en FS LIGA 3ª DIVISIÓN - FUTORMES</span>
+    </div>
+</div>
+
+ <!-- Añade espacio de 20px -->
+<div style="height: 10px;"></div>
+ <!-- Añade espacio -->
+
+<div class="main-content-wrapper">
+    <div class="left-column">
+        {% include 'Clasificacion/marcador.html' %}
+        <div style="height: 40px;"></div> <!-- Añade espacio de 40px -->
+        {% include 'Clasificacion/resultados.html' %}
+    </div>
+    <div class="right-column">
+        {% include 'Clasificacion/posiciones_tabla.html' %}
+    </div>
+</div>
+
+ <!-- Añade espacio de 20px -->
+<div style="height: 50px;"></div>
+ <!-- Añade espacio -->
+
+
+
+<div class="stats-container">
+    <div class="stat">
+        <h2 class="stat-number">100+</h2>
+        <p class="stat-description">Fans</p>
+    </div>
+    <div class="stat">
+        <h2 class="stat-number">3</h2>
+        <p class="stat-description">Partidos Ganados</p>
+    </div>
+    <div class="stat">
+        <h2 class="stat-number">18</h2>
+        <p class="stat-description">Goles Anotados</p>
+    </div>
+</div>
+
+<!-- Añade espacio de 20px -->
+<div style="height: 100px;"></div>
+ <!-- Añade espacio -->
+
+<div class="champions-banner">
+    <div class="champion-title">
+        <span class="champion-star">&#9733;</span>
+        <span class="champion-text">Campeonatos Locales</span>
+        <span class="champion-star">&#9733;</span>
+    </div>
+    <div class="champion-event">"I Torneo Blackbulls y Amigos"</div>
+    <div class="champion-event">"I Torneo Futbol Sala Plaza Burgos"</div>
+</div>
+
+ <!-- Añade espacio de 20px -->
+<div style="height: 100px;"></div>
+ <!-- Añade espacio -->
+
+<h2 class="center-text large-font">PATROCINADORES</h2>
+<div class="gallery">
+    <img src="{{ url_for('static', filename='imgs/100_Montaditos.png') }}" alt="Bicicletas">
+    <img src="{{ url_for('static', filename='imgs/bicicletas.jpeg') }}" alt="Bicicletas">
+    <img src="{{ url_for('static', filename='imgs/ElRetiro.jpg') }}" alt="Bicicletas">
+    <img src="{{ url_for('static', filename='imgs/mANZANAfIX.jpg') }}" alt="Bicicletas">
+</div>
+
+
+<!-- Añade espacio de 20px -->
+<div style="height: 100px;"></div>
+ <!-- Añade espacio -->
+
+<!-- Añade el widget de Instagram -->
+<div id="instafeed" style="text-align: center;">
+    <iframe src="https://snapwidget.com/embed/1082612" class="snapwidget-widget" allowtransparency="false" frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:900px; height:300px" title="Historias Union 1"></iframe>
+</div>
+
+<!-- Añade espacio de 20px -->
+<div style="height: 50px;"></div>
+ <!-- Añade espacio -->
+<!-- Aquí añadimos el pie de página -->
+
+{% endblock %}
+
+{% block clasificacion %}
+    {% include 'Clasificacion/posiciones_tabla.html' %}
+{% endblock %}

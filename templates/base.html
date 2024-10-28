@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Unión Vinotinto{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scoreboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/resultados.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/posiciones.css') }}">
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="social-icons">
+                <!-- Aquí puedes añadir íconos de redes sociales si lo deseas -->
+                <a href="https://www.instagram.com" target="_blank"><img src="{{ url_for('static', filename='logo/instagram.png') }}" alt="Instagram"></a>
+            </div>
+            <div class="top-links">
+                <a href="{{ url_for('nosotros') }}" target="_blank">Sobre Nosotros</a>
+            </div>
+            <div class="top-links">
+                <a href="https://api.whatsapp.com/send?phone=604867219&text=Hola, me gustaría saber sobre Unión Vinotinto" target="_blank">CONTACTO</a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{{ url_for('inicio') }}">INICIO</a></li>
+                <li><a href="{{ url_for('equipo') }}">EQUIPO</a></li>
+                <li><a href="{{ url_for('calendario') }}">CALENDARIO</a></li>
+<!--                <li><a href="#">VÍDEOS</a></li>-->
+            </ul>
+        </nav>
+        <div class="news-ticker-wrapper">
+            <div class="news-label">LO ÚLTIMO</div>
+            <div class="news-ticker">
+                <div class="ticker-content">
+                    <span class="ticker-item">Próximo partido sábado 08/11/24 - (hora por definir)</span>
+                    <!-- <span class="ticker-item">Otro titular importante para mostrar en la banda de noticias</span> -->
+                </div>
+            </div>
+            <div class="news-label"></div>
+        </div>
+    </header>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-icons">
+                <!-- Aquí puedes añadir íconos de redes sociales si lo deseas -->
+                <a href="https://www.instagram.com" target="_blank"><img src="{{ url_for('static', filename='logo/instagram.png') }}" alt="Instagram"></a>
+                <p><a href="mailto:unionvinotintofs@gmail.com?subject=Consulta%20sobre%20el%20equipo%20Unión%20Vinotinto&body=Hola%20Unión%20Vinotinto%2C%0D%0A%0D%0AQuisiera%20consultar%20lo%20siguiente%3A">unionvinotintofs@gmail.com</a></p>
+
+                <a href="https://api.whatsapp.com/send?phone=604867219&text=Hola, me gustaría saber sobre Unión Vinotinto" target="_blank">604867219</a>
+            </div>
+<!--            <div class="footer-section">-->
+<!--                <h3>CORREO</h3>-->
+<!--                <p>hola@unsitiofenomenal.es</p>-->
+<!--            </div>-->
+            <div class="footer-section logo-section">
+                <img src="{{ url_for('static', filename='imgs/team-Photoroom.png') }}" alt="Logo Unión Vinotinto" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
+

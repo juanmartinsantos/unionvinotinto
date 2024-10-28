@@ -1,0 +1,126 @@
+.posiciones-container {
+    overflow-x: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.posiciones-container .table-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.posiciones-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.posiciones-container th, .posiciones-container td {
+    padding: 10px 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.posiciones-container th {
+    background-color: #009879;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.posiciones-container tr:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.posiciones-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+.posiciones-container .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.posiciones-container .ascenso {
+    background-color: #41A62A; /* Verde para ascenso */
+}
+
+.posiciones-container .descenso {
+    background-color: #E2001A; /* Rojo para descenso */
+}
+
+.posiciones-container .neutral {
+    background-color: #9b9b9b; /* Gris para mantener posición */
+}
+
+.posiciones-container .points {
+    font-weight: bold;
+    color: #333;
+}
+
+.posiciones-container td.equipo, .posiciones-container th.equipo {
+    text-align: left;
+}
+
+.posiciones-container td.equipounion, .posiciones-container th.equipounion {
+    text-align: left;
+    font-weight: bold;
+}
+
+.posiciones-container th:nth-child(4), .posiciones-container td:nth-child(4) {
+    text-align: left;
+    width: 40%;
+}
+
+.posiciones-container th:nth-child(1), .posiciones-container td:nth-child(1) {
+    width: 8px;
+}
+
+.posiciones-container th:nth-child(2), .posiciones-container td:nth-child(2) {
+    width: 20px;
+}
+
+.posiciones-container th:nth-child(3), .posiciones-container td:nth-child(3) {
+    width: 30px;
+}
+
+.posiciones-container th:nth-child(5), .posiciones-container td:nth-child(5),
+.posiciones-container th:nth-child(6), .posiciones-container td:nth-child(6),
+.posiciones-container th:nth-child(7), .posiciones-container td:nth-child(7),
+.posiciones-container th:nth-child(8), .posiciones-container td:nth-child(8),
+.posiciones-container th:nth-child(9), .posiciones-container td:nth-child(9),
+.posiciones-container th:nth-child(10), .posiciones-container td:nth-child(10),
+.posiciones-container th:nth-child(11), .posiciones-container td:nth-child(11),
+.posiciones-container th:nth-child(12), .posiciones-container td:nth-child(12),
+.posiciones-container th:nth-child(13), .posiciones-container td:nth-child(13) {
+    width: 30px;
+}
+
+.posiciones-container th:nth-child(14), .posiciones-container td:nth-child(14),
+.posiciones-container th:nth-child(15), .posiciones-container td:nth-child(15),
+.posiciones-container th:nth-child(16), .posiciones-container td:nth-child(16) {
+    width: 0px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .posiciones-container th, .posiciones-container td {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .posiciones-container th:nth-child(4), .posiciones-container td:nth-child(4) {
+        width: 40%;
+    }
+}

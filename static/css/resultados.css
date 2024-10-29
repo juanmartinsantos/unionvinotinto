@@ -29,10 +29,17 @@
     text-align: center;
     border-bottom: 1px solid #ddd;
     font-size: 14px;
+    vertical-align: middle; /* Centra verticalmente las celdas */
 }
 
 .result-table td.result {
     font-weight: bold; /* Hace los marcadores en negrita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espacio entre los números y el guion */
+    white-space: nowrap; /* Evita que el marcador se divida en dos líneas */
+    font-size: 16px;
 }
 
 .result-table tr:nth-child(even) {
@@ -45,10 +52,9 @@
 
 .result-table td.team-name {
     text-align: left;
-    /* font-weight: bold;*/
+    padding-left: 10px; /* Añade espacio a la izquierda del nombre del equipo */
 }
 
-/* Título para la tabla */
 .resultados-container .table-title {
     font-size: 18px;
     font-weight: bold;
@@ -58,16 +64,8 @@
 }
 
 @media (max-width: 768px) {
-    .resultados-table {
+    .result-table {
         font-size: 12px;
         width: 100%;
     }
-}
-
-/* Asegura que los resultados (marcadores) estén en una sola línea */
-.result-table td.result {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px; /* Espacio entre los números y el guion */
 }

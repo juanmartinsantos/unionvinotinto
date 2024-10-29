@@ -27,9 +27,9 @@
 .result-table td {
     padding: 10px;
     text-align: center;
-    border-bottom: 1px solid #ddd;
     font-size: 14px;
-    vertical-align: middle; /* Centra verticalmente las celdas */
+    /* Elimina el borde inferior */
+    border-bottom: none;
 }
 
 .result-table td.result {
@@ -40,6 +40,7 @@
     gap: 5px; /* Espacio entre los números y el guion */
     white-space: nowrap; /* Evita que el marcador se divida en dos líneas */
     font-size: 16px;
+    border-bottom: none; /* Remueve la línea de borde en las celdas de los marcadores */
 }
 
 .result-table tr:nth-child(even) {
@@ -50,10 +51,16 @@
     background-color: #e2e8f0;
 }
 
-.result-table td.team-name {
-    text-align: left;
-    padding-left: 10px; /* Añade espacio a la izquierda del nombre del equipo */
+.result-table td.local-team {
+    text-align: right;
+    padding-right: 10px; /* Añade espacio a la derecha del nombre del equipo LOCAL */
 }
+
+.result-table td.visitor-team {
+    text-align: left;
+    padding-left: 10px; /* Añade espacio a la izquierda del nombre del equipo VISITANTE */
+}
+
 
 .resultados-container .table-title {
     font-size: 18px;

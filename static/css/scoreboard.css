@@ -40,6 +40,9 @@
     color: #fff;
     background-color: #1d4ed8;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 0 0 120px;
     clip-path: polygon(50% 0%, 100% 20%, 100% 80%, 50% 100%, 0% 80%, 0% 20%);
     z-index: 1;

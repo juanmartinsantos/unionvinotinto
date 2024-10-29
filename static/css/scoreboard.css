@@ -78,3 +78,24 @@
         width: 100%; /* Asegura que ocupe el ancho completo de la pantalla */
     }
 }
+
+/* Nuevo código para adaptar el marcador en móviles */
+@media (max-width: 768px) {
+    .scoreboard {
+        flex-direction: column; /* Coloca los elementos en una columna en lugar de una fila */
+        align-items: center;
+        font-size: 1.2em; /* Ajusta el tamaño de la fuente para móviles */
+        width: 100%; /* Asegura que el marcador ocupe el ancho completo */
+        margin: 0 auto; /* Centra el marcador */
+    }
+
+    .team, .score, .scoreboard-status {
+        width: 100%; /* Asegura que cada elemento ocupe el ancho completo */
+        text-align: center; /* Centra el texto */
+        margin-bottom: 5px; /* Añade un poco de espacio entre los elementos */
+    }
+
+    .score {
+        font-size: 1.5em; /* Agranda el tamaño del puntaje */
+    }
+}

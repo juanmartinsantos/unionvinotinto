@@ -506,3 +506,25 @@ h1, h2 {
         margin-bottom: 20px; /* Añade espacio entre las estadísticas */
     }
 }
+
+
+@media (max-width: 768px) {
+    .news-ticker-wrapper {
+        padding: 10px 5px; /* Reduce el padding para ajustarse al ancho de móviles */
+    }
+
+    .news-ticker {
+        width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+        overflow: hidden; /* Oculta cualquier contenido que desborde */
+        padding: 8px 0; /* Ajusta el padding para mantenerlo consistente en móviles */
+    }
+
+    .ticker-content {
+        animation: ticker 10s linear infinite; /* Asegúrate de que el nombre de la animación sea el mismo */
+    }
+
+    .ticker-item {
+        font-size: 0.9em; /* Reduce el tamaño del texto */
+        padding: 0 150px; /* Ajusta el espacio lateral para que sea visible en móviles */
+    }
+}

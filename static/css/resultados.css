@@ -63,3 +63,11 @@
         width: 100%;
     }
 }
+
+/* Asegura que los resultados (marcadores) estén en una sola línea */
+.result-table td.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Espacio entre los números y el guion */
+}

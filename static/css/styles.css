@@ -528,3 +528,11 @@ h1, h2 {
         padding: 0 150px; /* Ajusta el espacio lateral para que sea visible en móviles */
     }
 }
+
+@media (max-width: 768px) {
+    .logo {
+        width: 30%; /* Ajusta este valor para agrandar el logo */
+        margin-top: 10px; /* Opcional: reduce el espacio superior si lo consideras necesario */
+        margin-bottom: 10px; /* Opcional: reduce el espacio inferior si es necesario */
+    }
+}

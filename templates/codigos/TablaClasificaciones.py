@@ -3,29 +3,28 @@ import pandas as pd
 # Datos de la tabla "Clasificación"
 data = {
     'Equipo': [
-        "VALDELOSA FS",
-        "DOÑINOS-LOW COST CARBURANTES",
-        "BIZAS",
-        "LIVERPOOL PUB",
         "PAPELERIA SAN FERNANDO B",
+        "LIVERPOOL PUB",
+        "BIZAS",
+        "DOÑINOS-LOW COST CARBURANTES",
+        "VALDELOSA FS",
+        "CASTELLANOS DE MORISCOS",
         "UNIÓN VINOTINTO FS",
         "TRIANGLE CREATIVE-BAR VERDI",
         "LA ROSA IBÉRICA",
-        "CASTELLANOS DE MORISCOS",
         "DOÑINOS FS",
         "FC HIDRAFRESA SONNER"
     ],
-    'PJ': [7, 7, 6, 7, 6, 6, 6, 6, 6, 6, 7],  # Partidos Jugados
-    'PG': [4, 3, 4, 4, 3, 3, 3, 2, 2, 1, 0],  # Partidos Ganados
-    'PE': [1, 4, 0, 0, 2, 2, 1, 1, 1, 0, 1],  # Partidos Empatados
-    'PP': [2, 0, 2, 3, 1, 1, 2, 3, 3, 5, 6],  # Partidos Perdidos
-    'GF': [36, 35, 34, 31, 26, 21, 31, 35, 10, 23, 24],  # Goles a Favor
-    'GC': [27, 28, 22, 20, 16, 17, 23, 51, 20, 36, 46],  # Goles en Contra
-    'DG': [9, 7, 12, 11, 10, 4, 8, -16, -10, -13, -22],  # Diferencia de Goles
-    'SN': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],  # Sin Novedades (puede no ser usado)
-    'PT': [13, 13, 12, 12, 11, 11, 10, 7, 6, 3, 1]   # Puntos
+    'PJ': [8, 9, 8, 9, 8, 8, 8, 8, 8, 8, 8],  # Partidos Jugados
+    'PG': [5, 5, 5, 3, 4, 4, 3, 3, 2, 2, 0],  # Partidos Ganados
+    'PE': [2, 1, 1, 3, 0, 0, 2, 1, 1, 1, 2],  # Partidos Empatados
+    'PP': [1, 3, 2, 3, 4, 4, 3, 4, 5, 5, 6],  # Partidos Perdidos
+    'GF': [33, 44, 50, 43, 47, 27, 26, 34, 42, 34, 34],  # Goles a Favor
+    'GC': [18, 28, 35, 36, 38, 29, 26, 31, 67, 42, 50],  # Goles en Contra
+    'DG': [15, 16, 15, 7, 9, -2, 0, 3, -25, -8, -16],  # Diferencia de Goles
+    'SN': [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],  # Sin Novedades (no se usa)
+    'PT': [17, 16, 16, 15, 14, 12, 11, 10, 7, 6, 6]   # Puntos
 }
-
 
 
 # Crear el DataFrame
